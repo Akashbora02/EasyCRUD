@@ -38,7 +38,7 @@ const RegistrationForm = () => {
           type="text"
           placeholder="Name"
           value={name}
-          onChange={(e) => setName(e.target.value.slice(0, 11))}
+          onChange={(e) => setName(e.target.value.slice(0, 50))}
           className="form-input"
           required
         />
@@ -46,7 +46,7 @@ const RegistrationForm = () => {
           type="email"
           placeholder="Email"
           value={email}
-          onChange={(e) => setEmail(e.target.value.slice(0, 18))}
+          onChange={(e) => setEmail(e.target.value.slice(0, 50))}
           className="form-input"
           required
         />
@@ -54,7 +54,7 @@ const RegistrationForm = () => {
           type="text"
           placeholder="Course"
           value={course}
-          onChange={(e) => setCourse(e.target.value.slice(0, 11))}
+          onChange={(e) => setCourse(e.target.value.slice(0, 50))}
           className="form-input"
           required
         />
@@ -62,7 +62,7 @@ const RegistrationForm = () => {
           type="text"
           placeholder="Highest Education"
           value={studentClass}
-          onChange={(e) => setStudentClass(e.target.value.slice(0, 12))}
+          onChange={(e) => setStudentClass(e.target.value.slice(0, 50))}
           className="form-input"
           required
         />
@@ -70,7 +70,7 @@ const RegistrationForm = () => {
           type="number"
           placeholder="Percentage"
           value={percentage}
-          onChange={(e) => setPercentage(e.target.value.slice(0, 11))}
+          onChange={(e) => setPercentage(e.target.value.slice(0, 10))}
           className="form-input"
           required
         />
@@ -78,7 +78,7 @@ const RegistrationForm = () => {
           type="text"
           placeholder="Branch Or Stream"
           value={branch}
-          onChange={(e) => setBranch(e.target.value.slice(0, 12))}
+          onChange={(e) => setBranch(e.target.value.slice(0, 50))}
           className="form-input"
           required
         />
@@ -86,7 +86,7 @@ const RegistrationForm = () => {
           type="number"
           placeholder="Mobile Number"
           value={mobileNumber}
-          onChange={(e) => setMobileNumber(e.target.value.slice(0, 12))}
+          onChange={(e) => setMobileNumber(e.target.value.slice(0, 11))}
           className="form-input"
           required
         />
