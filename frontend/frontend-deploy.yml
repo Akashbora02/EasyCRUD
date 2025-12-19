@@ -22,6 +22,6 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name: frontend
-        image: akashbora02/easycrudfe:v1
+        image: akashbora02/easycrudfe:v2
         ports:
         - containerPort: 80
