@@ -1,4 +1,4 @@
-FROM maven:3.8.3-openjdk-17
+FROM maven:3.8.7-openjdk-17
 COPY . /opt/
 WORKDIR /opt
 RUN rm -f src/main/resources/application.properties && \
