@@ -5,6 +5,6 @@ RUN rm -f src/main/resources/application.properties && \
     cp -f application.properties src/main/resources/application.properties && \
     mvn clean package 
 WORKDIR target/
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT ["java","-jar"]
 CMD ["student-registration-backend-0.0.1-SNAPSHOT.jar"]
