@@ -25,6 +25,3 @@ spec:
         image: akashbora02/easycrudfe:v1
         ports:
         - containerPort: 80
-        env:
-          - name: VITE_API_URL
-            value: "http://a86cc82dc70ab4314b8dca31178088fa-1043297742.us-east-1.elb.amazonaws.com:8080/api"
