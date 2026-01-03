@@ -4,7 +4,6 @@ pipeline{
     }
     tools {
         nodejs 'node18'
-        sonarScanner 'sonar-scanner'
     }
     stages{
         stage('Checkout'){
