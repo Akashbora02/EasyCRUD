@@ -57,11 +57,11 @@ pipeline{
                     echo "Deploying Docker container..."
 
                     # Stop and remove old container if exists
-                    docker stop easycrud || true
-                    docker rm easycrud || true
+                    sudo docker stop easycrud || true
+                    sudo docker rm easycrud || true
 
                     # Run new container
-                    docker run -d \
+                    sudo docker run -d \
                     --name easycrud \
                     -p 3000:80 \
                     easycrud:latest
