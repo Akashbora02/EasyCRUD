@@ -43,7 +43,7 @@ pipeline{
                         ls
                         sonar-scanner \
                         -Dsonar.projectKey=EASYCRUD \
-                        -Dsonar.sources=. \
+                        -Dsonar.sources=src \
                         -Dsonar.login=$SONAR_TOKEN
                         '''
                     }
