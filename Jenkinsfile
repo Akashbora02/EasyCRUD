@@ -43,6 +43,7 @@ pipeline{
                     -Dsonar.login=$SONAR_TOKEN
                     '''
                 }
+            }
         }
         stage('Deploy') {
             steps {
