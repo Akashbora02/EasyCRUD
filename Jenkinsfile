@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Install Dependencies') {
             steps {
-                dir('frontend')
+                dir('frontend'){
                 sh '''
                   echo "Installing npm dependencies..."
                   npm install
