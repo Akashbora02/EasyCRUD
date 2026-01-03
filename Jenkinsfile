@@ -23,10 +23,12 @@ pipeline{
         }
         stage('Build'){
             steps{
+                dir('frontend'){
                     sh '''
                     echo "Building Docker image..."
-                    docker build -t easycrud:latest .
+                    sudo docker build -t easycrud:latest .
                     '''
+                }
             }
         }
         stage('SonarQube Analysis') {
@@ -48,19 +50,21 @@ pipeline{
         }
         stage('Deploy') {
             steps {
-                sh '''
-                echo "Deploying Docker container..."
+                dir('frontend'){
+                    sh '''
+                    echo "Deploying Docker container..."
 
-                # Stop and remove old container if exists
-                docker stop easycrud || true
-                docker rm easycrud || true
+                    # Stop and remove old container if exists
+                    docker stop easycrud || true
+                    docker rm easycrud || true
 
-                # Run new container
-                docker run -d \
-                --name easycrud \
-                -p 3000:80 \
-                easycrud:latest
-                '''
+                    # Run new container
+                    docker run -d \
+                    --name easycrud \
+                    -p 3000:80 \
+                    easycrud:latest
+                    '''
+                }
             }
         }
     }
