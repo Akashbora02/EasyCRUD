@@ -36,15 +36,17 @@ pipeline{
                 SONAR_TOKEN = credentials('sonar-token')
                 }
             steps {
-                withSonarQubeEnv('sonarqube') {
-                    sh '''
-                    pwd
-                    ls
-                    sonar-scanner \
-                    -Dsonar.projectKey=EASYCRUD \
-                    -Dsonar.sources=. \
-                    -Dsonar.login=$SONAR_TOKEN
-                    '''
+                dir('frontend'){
+                    withSonarQubeEnv('sonarqube') {
+                        sh '''
+                        pwd
+                        ls
+                        sonar-scanner \
+                        -Dsonar.projectKey=EASYCRUD \
+                        -Dsonar.sources=. \
+                        -Dsonar.login=$SONAR_TOKEN
+                        '''
+                    }
                 }
             }
         }
