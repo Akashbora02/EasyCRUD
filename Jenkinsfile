@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git branch: 'main', credentialsId: 'acedaee5-0bf0-410e-89c5-46cc66ba198d', url: 'https://github.com/Akashbora02/EasyCRUD.git'
+                git branch: 'main', credentialsId: '8b6c1da2-3b18-4f7c-b4f5-ef9111c139a0', url: 'https://github.com/Akashbora02/EasyCRUD.git'
             }
         }
         stage('Install Dependencies') {
